@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Devoir3</string>
+    <string name="LienCours">Lien de la séance</string>
+    <string name="description">Description de la séance</string>
+    <string name="lienRick">https://www.youtube.com/watch?v=dQw4w9WgXcQ</string>
+    <string name="MesCours">Mes Cours</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Recherche</string>
+</resources>

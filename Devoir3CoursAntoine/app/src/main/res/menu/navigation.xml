@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:id="@+id/search"
+    android:icon="@drawable/search"
+    android:title="Recherche"></item>
+    <item android:icon="@drawable/mescours"
+        android:id="@+id/mescours"
+        android:title="@string/MesCours"></item>
+    <item android:icon="@drawable/calendrier"
+        android:id="@+id/calendrier"
+        android:title="Calendrier"></item>
+    <item android:icon="@drawable/message"
+        android:id="@+id/message"
+        android:title="Message"></item>
+</menu>
