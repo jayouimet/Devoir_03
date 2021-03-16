@@ -15,7 +15,7 @@
         android:layout_marginBottom="34dp"
         android:text="TextView"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageSeance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageSeance"
         android:layout_width="332dp"
         android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +35,7 @@
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/infoSeance"
         android:layout_width="409dp"
         android:layout_height="149dp"
         android:layout_marginTop="16dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageSeance">
 
         <TextView
             android:id="@+id/lien"
@@ -87,18 +87,18 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/listSeance"
         android:layout_width="427dp"
         android:layout_height="121dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/infoSeance"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageProfilSeance"
         android:layout_width="83dp"
         android:layout_height="85dp"
         android:onClick="clickProfil"
@@ -111,13 +111,13 @@
         app:srcCompat="@drawable/iconeprofil_foreground" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageXSeance"
         android:layout_width="49dp"
         android:layout_height="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageSeance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.893"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageProfilSeance"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.233"
         app:srcCompat="@mipmap/xsign_foreground"
@@ -135,7 +135,7 @@
         app:layout_constraintHorizontal_bias="0.0"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listview"
+        app:layout_constraintTop_toBottomOf="@+id/listSeance"
         app:layout_constraintVertical_bias="0.238"
         app:menu="@menu/navigation" />
 

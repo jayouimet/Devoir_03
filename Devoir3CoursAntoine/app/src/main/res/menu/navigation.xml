@@ -8,8 +8,8 @@
         android:title="@string/MesCours"></item>
     <item android:icon="@drawable/calendrier"
         android:id="@+id/calendrier"
-        android:title="Calendrier"></item>
+        android:title="@string/calendrier"></item>
     <item android:icon="@drawable/message"
         android:id="@+id/message"
-        android:title="Message"></item>
+        android:title="@string/Message"></item>
 </menu>

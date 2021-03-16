@@ -5,10 +5,15 @@ import java.util.ArrayList;
 public class Cours {
     private String titre;
     private ArrayList<Seance> tabSeance;
+    private String professeurPrenom;
+    private String professeurNom;
+
 
 
 
     Cours(String titre){
+        professeurPrenom="Jean ";
+        professeurNom="Tremblay";
         this.titre=titre;
         tabSeance=new ArrayList<>();
         for (int i=0;i<12;i++){
@@ -34,5 +39,13 @@ public class Cours {
         }
 
         return null;
+    }
+
+    public String getProfesseurPrenom() {
+        return professeurPrenom;
+    }
+
+    public String getProfesseurNom() {
+        return professeurNom;
     }
 }

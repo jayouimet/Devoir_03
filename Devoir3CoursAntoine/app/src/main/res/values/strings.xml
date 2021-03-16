@@ -4,6 +4,13 @@
     <string name="description">Description de la séance</string>
     <string name="lienRick">https://www.youtube.com/watch?v=dQw4w9WgXcQ</string>
     <string name="MesCours">Mes Cours</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="recherchedecours">Recherche de cours</string>
+    <string name="rechercheruncours">Rechercher un cours</string>
+    <string name="calendrier">Calendrier</string>
+    <string name="Message">Messages</string>
+    <string name="prochainesremise">Prochaine remise:</string>
+    <string name="devoir3">Devoir 3 /Date: 01/04/2021</string>
+    <string name="professeur">Professeur:</string>
+
     <string name="hello_blank_fragment">Recherche</string>
 </resources>

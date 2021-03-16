@@ -9,6 +9,7 @@ public class Seance {
     Seance(String titre){
         this.titre=titre;
         nomfichier=new ArrayList<>();
+        //ajoute toutes les fichiers dans les seances pour les tests
         for(int i=0;i<6;i++){
             String temp="Diapo "+(i+1);
             nomfichier.add(temp);

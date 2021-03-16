@@ -8,11 +8,11 @@
     tools:context=".MesCours">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageProfileMescours"
         android:layout_width="64dp"
         android:layout_height="77dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintBottom_toTopOf="@+id/mesCours"
+        app:layout_constraintEnd_toStartOf="@+id/imageHamburgerMescours"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,11 +20,11 @@
         app:srcCompat="@mipmap/iconeprofil" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageHamburgerMescours"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintBottom_toTopOf="@+id/imagedeuxieme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         app:srcCompat="@mipmap/hamburger_foreground" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/mesCours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -53,8 +53,8 @@
         android:id="@+id/imagepremier"
         android:layout_width="115dp"
         android:layout_height="115dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView11"
+        app:layout_constraintBottom_toTopOf="@+id/textpremier"
+        app:layout_constraintEnd_toStartOf="@+id/imagedeuxieme"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
@@ -62,130 +62,130 @@
     <ImageView
         android:onClick="accederCours"
         android:tag="i2"
-        android:id="@+id/imageView9"
+        android:id="@+id/imagetroisieme"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/texttroisieme"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
 
     <ImageView
         android:onClick="accederCours"
         android:tag="i4"
-        android:id="@+id/imageView10"
+        android:id="@+id/imagecinqieme"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginEnd="84dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintBottom_toTopOf="@+id/textcinquieme"
+        app:layout_constraintEnd_toStartOf="@+id/imagesixieme"
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
 
     <ImageView
         android:onClick="accederCours"
         android:tag="i1"
-        android:id="@+id/imageView11"
+        android:id="@+id/imagedeuxieme"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginEnd="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/textdeuxieme"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
 
     <ImageView
         android:onClick="accederCours"
         android:tag="i3"
-        android:id="@+id/imageView12"
+        android:id="@+id/imagequatrieme"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/textquatrieme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/imagetroisieme"
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
 
     <ImageView
         android:onClick="accederCours"
         android:tag="i5"
-        android:id="@+id/imageView13"
+        android:id="@+id/imagesixieme"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginEnd="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintBottom_toTopOf="@+id/textsixieme"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@mipmap/imagesansdroit_foreground" />
 
     <TextView
 
-        android:id="@+id/textView4"
-android:tag="t0"
+        android:id="@+id/textpremier"
+        android:tag="t0"
         android:onClick="accederCours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/imagetroisieme"
+        app:layout_constraintEnd_toStartOf="@+id/textdeuxieme"
         app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:onClick="accederCours"
         android:tag="t1"
-        android:id="@+id/textView5"
+        android:id="@+id/textdeuxieme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintBottom_toTopOf="@+id/imagequatrieme"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:onClick="accederCours"
         android:tag="t2"
-        android:id="@+id/textView6"
+        android:id="@+id/texttroisieme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/imagecinqieme"
+        app:layout_constraintEnd_toStartOf="@+id/textquatrieme"
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:onClick="accederCours"
         android:tag="t4"
-        android:id="@+id/textView7"
+        android:id="@+id/textcinquieme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/textsixieme"
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:onClick="accederCours"
         android:tag="t3"
-        android:id="@+id/textView8"
+        android:id="@+id/textquatrieme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageView13"
+        app:layout_constraintBottom_toTopOf="@+id/imagesixieme"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:onClick="accederCours"
         android:tag="t5"
-        android:id="@+id/textView9"
+        android:id="@+id/textsixieme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="112dp"
@@ -215,7 +215,7 @@ android:tag="t0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imagesixieme"
         app:layout_constraintVertical_bias="1.0"
         app:itemBackground="@color/white"
         app:itemIconTint="@color/black"

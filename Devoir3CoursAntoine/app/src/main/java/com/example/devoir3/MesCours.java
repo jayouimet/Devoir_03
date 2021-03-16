@@ -5,19 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class MesCours extends AppCompatActivity {
     TextView mescours;
@@ -29,7 +22,7 @@ public class MesCours extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes_cours);
         //met le titre mes cours
-        mescours=findViewById(R.id.textView);
+        mescours=findViewById(R.id.mesCours);
         mescours.setText(R.string.MesCours);
         //creer l'utilisateur
         actuel =new Utilisateur();
@@ -61,7 +54,8 @@ public class MesCours extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.search){
-
+                    Intent intent=new Intent(MesCours.this,RechercherCours.class);
+                    startActivity(intent);
                     return true;
                 }
                 else if(item.getItemId()==R.id.calendrier){

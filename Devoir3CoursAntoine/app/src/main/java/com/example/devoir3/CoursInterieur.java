@@ -13,8 +13,6 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationMenu;
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -35,8 +33,8 @@ public class CoursInterieur extends AppCompatActivity {
         String titreCours=getIntent().getStringExtra("CoursNom");//va chercher le nom du cours
         actuel =new Cours(titreCours);//cours actuel
         //va chercher la liste view
-        maListViewPerso=(ListView)findViewById(R.id.listview);
-        titre=findViewById(R.id.textView3);
+        maListViewPerso=(ListView)findViewById(R.id.listSeance);
+        titre=findViewById(R.id.titreCoursInterieur);
         titre.setText(actuel.getTitre());//mes le titre du cours
         bottomNavigationMenu=findViewById(R.id.barnavigationcoursinterieur);
         //Création de la ArrayList qui nous permettra de remplir la listView
@@ -58,35 +56,9 @@ public class CoursInterieur extends AppCompatActivity {
             listItem.add(map);
 
         }
-        bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.mescours){
-                    Intent intent=new Intent(CoursInterieur.this, MesCours.class);
-                    startActivity(intent);
-                    return true;
-                }
-                else if(item.getItemId()==R.id.search){
-
-                    return true;
-                }
-                else if(item.getItemId()==R.id.calendrier){
-
-                    return true;
-                }
-                else if(item.getItemId()==R.id.message){
-
-                    return true;
-                }
-                return false;
-            }
-        });
-
-
-
 
         //Création d'un SimpleAdapter qui se chargera de mettre les items présents dans notre list (listItem) dans la vue row(chque cours)
-        SimpleAdapter mSchedule = new SimpleAdapter (this.getBaseContext(), listItem, R.layout.row,
+        SimpleAdapter mSchedule = new SimpleAdapter (this.getBaseContext(), listItem, R.layout.rangeseance,
                 new String[] { "titre", "description"}, new int[] { R.id.titre, R.id.description});
 
 
@@ -116,7 +88,30 @@ public class CoursInterieur extends AppCompatActivity {
 
             }
         });
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if(item.getItemId()==R.id.mescours){
+                    Intent intent=new Intent(CoursInterieur.this, MesCours.class);
+                    startActivity(intent);
+                    return true;
+                }
+                else if(item.getItemId()==R.id.search){
+                    Intent intent=new Intent(CoursInterieur.this,RechercherCours.class);
+                    startActivity(intent);
+                    return true;
+                }
+                else if(item.getItemId()==R.id.calendrier){
 
+                    return true;
+                }
+                else if(item.getItemId()==R.id.message){
+
+                    return true;
+                }
+                return false;
+            }
+        });
     }
     public void clickProfil(View v){
         Log.d("tag","icone profile");

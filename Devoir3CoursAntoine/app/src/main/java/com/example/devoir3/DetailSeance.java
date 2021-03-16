@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
@@ -46,7 +45,7 @@ public class DetailSeance extends AppCompatActivity {
         String descrptionSeance=getIntent().getStringExtra("SeanceDescription");
         descriptionSpecifique.setText(descrptionSeance);
         titre.setText(titreSeance);
-        malist=(ListView)findViewById(R.id.listview);
+        malist=(ListView)findViewById(R.id.listSeance);
         //Création de la ArrayList qui nous permettra de remplir la listView
         ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
         actuel=new Seance(titreSeance);
@@ -74,7 +73,8 @@ public class DetailSeance extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.search){
-
+                    Intent intent=new Intent(DetailSeance.this,RechercherCours.class);
+                    startActivity(intent);
                     return true;
                 }
                 else if(item.getItemId()==R.id.calendrier){

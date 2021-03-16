@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RechercherCours">
+
+
+    <ListView
+        android:id="@+id/listeCours"
+        android:layout_width="370dp"
+        android:layout_height="367dp"
+        android:layout_marginTop="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barnavigationrechecher"
+        android:layout_width="413dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="1dp"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listeCours"
+        app:layout_constraintVertical_bias="0.142"
+        app:menu="@menu/navigation" />
+
+    <TextView
+        android:id="@+id/rechercherTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/rechercheruncours"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rechercher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageprofilerecherche"
+        android:layout_width="60dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/iconeprofil" />
+
+    <ImageView
+        android:id="@+id/imagehaburgerhambugrger"
+        android:layout_width="61dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toEndOf="@+id/imageprofilerecherche"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/hamburger_foreground" />
+
+    <EditText
+        android:id="@+id/rechercher"
+        android:layout_width="363dp"
+        android:layout_height="76dp"
+        android:drawableLeft="@drawable/search"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/recherchedecours"
+        app:layout_constraintBottom_toTopOf="@+id/listeCours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
