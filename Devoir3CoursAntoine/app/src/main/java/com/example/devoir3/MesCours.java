@@ -64,7 +64,8 @@ public class MesCours extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){
-
+                    Intent intent=new Intent(MesCours.this,Messagerie.class);
+                    startActivity(intent);
                     return true;
                 }
                 return false;
@@ -75,12 +76,12 @@ public class MesCours extends AppCompatActivity {
         //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
         imageProfileMescours = (ImageView) findViewById(R.id.imageProfileMescours);
         imageProfileMescours.setOnClickListener(new View.OnClickListener() {
-                                                 @Override
-                                                 public void onClick(View v) {
-                                                     Intent intent = new Intent(MesCours.this, MonProfil.class);
-                                                     startActivity(intent);
-                                                 }
-                                             }
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MesCours.this, MonProfil.class);
+                startActivity(intent);
+            }
+        }
         );
 
     }

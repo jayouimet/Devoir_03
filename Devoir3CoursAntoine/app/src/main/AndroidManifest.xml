@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Devoir3">
-        <activity android:name=".InfoPerso"></activity>
+        <activity android:name=".Messagerie"></activity>
+        <activity android:name=".InfoPerso" />
         <activity android:name=".MonProfil" />
         <activity android:name=".RechercherCours" />
         <activity android:name=".MesCours">
