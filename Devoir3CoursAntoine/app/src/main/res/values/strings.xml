@@ -11,6 +11,9 @@
     <string name="prochainesremise">Prochaine remise:</string>
     <string name="devoir3">Devoir 3 /Date: 01/04/2021</string>
     <string name="professeur">Professeur:</string>
-
-    <string name="hello_blank_fragment">Recherche</string>
+    <string name="Messagerie">Messagerie</string>
+    <string name="Recherche">Recherche</string>
+    <string name="vous">Vous</string>
+    <string name="heure">20h46</string>
+    <string name="envoyer">Envoyer</string>
 </resources>

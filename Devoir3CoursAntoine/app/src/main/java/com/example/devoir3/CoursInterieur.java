@@ -119,12 +119,12 @@ public class CoursInterieur extends AppCompatActivity {
         //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
         imageProfilInterieur = (ImageView) findViewById(R.id.imageProfilInterieur);
         imageProfilInterieur.setOnClickListener(new View.OnClickListener() {
-                                                     @Override
-                                                     public void onClick(View v) {
-                                                         Intent intent = new Intent(CoursInterieur.this, MonProfil.class);
-                                                         startActivity(intent);
-                                                     }
-                                                 }
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CoursInterieur.this, MonProfil.class);
+                startActivity(intent);
+            }
+        }
         );
     }
     public void clickProfil(View v){
