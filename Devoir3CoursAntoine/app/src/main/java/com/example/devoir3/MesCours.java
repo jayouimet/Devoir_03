@@ -17,6 +17,7 @@ public class MesCours extends AppCompatActivity {
     Utilisateur actuel;
     TextView nombredecours;
     BottomNavigationView bottomNavigationView;
+    ImageView imageProfileMescours;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,7 @@ public class MesCours extends AppCompatActivity {
         //nombre de cours
         String nombrecoursString="Vous avez "+actuel.getTabCours().size()+" cours";
 
-        nombredecours=findViewById(R.id.textViewf);
+        nombredecours=findViewById(R.id.textViewUniversitédeMtl);
         nombredecours.setText(nombrecoursString);
 
         View temp=findViewById(R.id.page);
@@ -70,6 +71,18 @@ public class MesCours extends AppCompatActivity {
             }
 
         });
+
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        imageProfileMescours = (ImageView) findViewById(R.id.imageProfileMescours);
+        imageProfileMescours.setOnClickListener(new View.OnClickListener() {
+                                                 @Override
+                                                 public void onClick(View v) {
+                                                     Intent intent = new Intent(MesCours.this, MonProfil.class);
+                                                     startActivity(intent);
+                                                 }
+                                             }
+        );
+
     }
 
 
