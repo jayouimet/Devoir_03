@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="turquoise">#ff00ffff</color>
     <color name="blue">#ff0000ff</color>
+    <color name="main_dark_blue">#FF08184E</color>
+    <color name="main_light_blue">#13AFD6</color>
 </resources>

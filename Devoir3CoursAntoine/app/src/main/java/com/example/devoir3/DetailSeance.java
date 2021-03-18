@@ -81,7 +81,8 @@ public class DetailSeance extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.calendrier){
-
+                    Intent intent=new Intent(DetailSeance.this,CalendarActivity.class);
+                    startActivity(intent);
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){
