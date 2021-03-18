@@ -173,7 +173,7 @@ public class Messagerie extends AppCompatActivity {
         SimpleAdapter nouvelleSechule = new SimpleAdapter(this.getBaseContext(), listObjetMessage, R.layout.messagerange,
                 new String[]{"message", "messageautre", "nomautre"}, new int[]{R.id.messagesoi, R.id.messagedeuser, R.id.nomAutre});
         messageutilisateur.setAdapter(nouvelleSechule);
-
+        // messageutilisateur.smoothScrollToPosition(messageutilisateur.getLastVisiblePosition());
     }
 
     /**

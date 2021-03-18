@@ -34,38 +34,42 @@
 
     <ListView
         android:id="@+id/message"
-        android:layout_width="356dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="308dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageEdit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
 
         android:id="@+id/messageEdit"
-        android:layout_width="222dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Votre message"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/message" />
+        app:layout_constraintBottom_toTopOf="@+id/barnavigationmessagerie"
+        app:layout_constraintEnd_toStartOf="@+id/buttonenvoyer"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonenvoyer"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/envoyer"
+        android:layout_marginEnd="8dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/messageEdit"
-        app:layout_constraintTop_toBottomOf="@+id/message" />
+        android:layout_marginBottom="8dp"
+        android:text="@string/envoyer"
+        app:layout_constraintBottom_toTopOf="@+id/barnavigationmessagerie"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/barnavigationmessagerie"

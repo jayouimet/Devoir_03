@@ -111,7 +111,7 @@ public class CalendarActivity extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){
-                    Intent intent=new Intent(CalendarActivity.this,Messagerie.class);
+                    Intent intent = new Intent(CalendarActivity.this,Messagerie.class);
                     startActivity(intent);
                     return true;
                 }
