@@ -74,6 +74,31 @@ public class MonProfil extends AppCompatActivity {
                                                      }
                                                  }
         );
+
+
+        //Lorsque l'utilisateur clique sur le texte « Liste de cours », il est ramené vers la page « Mes Cours »
+        tvNotifications = (TextView) findViewById(R.id.tvNotifications);
+        tvNotifications.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View v) {
+                                               Intent intent = new Intent(MonProfil.this, NotificationPage.class);
+                                               startActivity(intent);
+                                           }
+                                       }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône « Liste de cours », il est ramené vers la page « Mes Cours »
+        ivMonProfilNotification = (ImageView) findViewById(R.id.ivMonProfilNotification);
+        ivMonProfilNotification.setOnClickListener(new View.OnClickListener() {
+                                                     @Override
+                                                     public void onClick(View v) {
+                                                         Intent intent = new Intent(MonProfil.this, NotificationPage.class);
+                                                         startActivity(intent);
+                                                     }
+                                                 }
+        );
+
+
         bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId()==R.id.mescours){
                 Intent intent=new Intent(MonProfil.this, MesCours.class);

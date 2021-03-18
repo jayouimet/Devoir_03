@@ -246,12 +246,13 @@
         android:id="@+id/ivMonProfilInfosPerso"
         android:layout_width="47dp"
         android:layout_height="38dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottommenumescours"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        android:layout_marginTop="272dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivMonProfilNotification"
+        app:layout_constraintEnd_toStartOf="@+id/tvInfoPerso"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38"
+        app:layout_constraintVertical_bias="0.057"
         app:srcCompat="@drawable/user" />
 
     <ImageView
