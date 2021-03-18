@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:id="@+id/calendarTableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".20">
+
+            <TextView
+                android:id="@+id/calendarGridSundayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center"
+                android:text="@string/sunday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGridMondayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center"
+                android:text="@string/monday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGridTuesdayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center"
+                android:text="@string/tuesday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGridWednesdayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center"
+                android:text="@string/wednesday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGridThursdayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center"
+                android:text="@string/thursday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGridFridayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center"
+                android:text="@string/friday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGridSaturdayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center"
+                android:text="@string/saturday_letter"
+                android:textColor="@color/design_default_color_error"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/calendarGrid_00"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center_horizontal"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/calendarGrid_07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center_horizontal"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/calendarGrid_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center_horizontal"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/calendarGrid_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center_horizontal"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".5">
+            <TextView
+                android:id="@+id/calendarGrid_28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_29"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_32"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_33"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_34"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center_horizontal"></TextView>
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".5">
+            <TextView
+                android:id="@+id/calendarGrid_35"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_36"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_37"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_38"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_39"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:gravity="center_horizontal"></TextView>
+
+            <TextView
+                android:id="@+id/calendarGrid_41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:gravity="center_horizontal"></TextView>
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

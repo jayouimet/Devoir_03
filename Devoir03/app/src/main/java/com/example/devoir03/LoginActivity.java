@@ -49,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
                     // TODO : Change to next activity, uncomment and change NEXT_ACTIVITY with the next activity name
                     // Intent nextActivity = new Intent(LoginActivity.this, NEXT_ACTIVITY.class);
                     // startActivity(nextActivity);
+                    Intent nextActivity = new Intent(LoginActivity.this, CalendarActivity.class);
+                    startActivity(nextActivity);
                 }
                 else {
                     connectionErrorLabel.setText(getResources().getString(R.string.wrong_email_password_combinaison_label));

@@ -10,19 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Devoir03">
         <activity
-            android:name=".ForgotPwdActivity"
+            android:name=".CalendarActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ForgotPwdActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
