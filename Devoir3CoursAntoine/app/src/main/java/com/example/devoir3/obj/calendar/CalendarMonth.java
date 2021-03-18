@@ -1,10 +1,11 @@
 package com.example.devoir3.obj.calendar;
 
-import androidx.appcompat.app.AppCompatActivity;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CalendarMonth {
-    public CalendarDay[] calendarDays;
+    public List<CalendarDay> calendarDays;
     public int startingDay;
     public int month;
 
@@ -13,9 +14,9 @@ public class CalendarMonth {
         month = m;
         startingDay = date.getDayOfWeek().getValue();
         int maxDaysInMonth = date.toLocalDate().lengthOfMonth();
-        calendarDays = new CalendarDay[maxDaysInMonth];
+        calendarDays = new ArrayList<>();
         for (int i = 0; i < maxDaysInMonth; i++) {
-            calendarDays[i] = new CalendarDay(i + 1);
+            calendarDays.add(new CalendarDay(i + 1));
         }
     }
 }

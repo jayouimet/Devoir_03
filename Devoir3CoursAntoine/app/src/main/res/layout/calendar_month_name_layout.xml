@@ -13,7 +13,7 @@
         android:gravity="center"
         android:text="@string/calendar_title_label"
         android:textColor="@color/main_dark_blue"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

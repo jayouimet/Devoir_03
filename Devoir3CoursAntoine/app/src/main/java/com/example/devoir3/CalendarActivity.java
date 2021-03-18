@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import com.example.devoir3.adapters.CalendarAdapter;
 import com.example.devoir3.adapters.CalendarMonthNameAdapter;
 import com.example.devoir3.obj.calendar.Calendar;
+import com.example.devoir3.obj.calendar.CalendarEvent;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.time.LocalDateTime;
@@ -27,6 +28,9 @@ public class CalendarActivity extends AppCompatActivity {
     private ImageButton nextMonthButton;
     private BottomNavigationView bottomNavBar;
 
+    private ImageButton profileButton;
+    private ImageButton notificationButton;
+
     private Calendar calendar;
 
     @Override
@@ -36,8 +40,11 @@ public class CalendarActivity extends AppCompatActivity {
 
         previousMonthButton = findViewById(R.id.previousMonthButton);
         nextMonthButton = findViewById(R.id.nextMonthButton);
+        profileButton = findViewById(R.id.calendarProfileButton);
+        notificationButton = findViewById(R.id.calendarNotificationButton);
 
         calendar = new Calendar();
+        calendar.AddEvent(new CalendarEvent("Remise du devoir 3"), 2021, 3, 18);
 
         calendarMonthNameRecyclerView = findViewById(R.id.calendarMonthNameRecyclerView);
         initialiseCalendarMonthNameRecyclerView();
@@ -45,8 +52,24 @@ public class CalendarActivity extends AppCompatActivity {
         calendarRecyclerView = findViewById(R.id.calendarRecyclerView);
         initialiseCalendarRecyclerView();
 
-        calendarRecyclerView.scrollToPosition(LocalDateTime.now().getMonth().getValue() - 1);
-        calendarMonthNameRecyclerView.scrollToPosition(LocalDateTime.now().getMonth().getValue() - 1);
+        calendarRecyclerView.scrollToPosition(LocalDateTime.now().getMonth().getValue() - 1 + 12);
+        calendarMonthNameRecyclerView.scrollToPosition(LocalDateTime.now().getMonth().getValue() - 1 + 12);
+
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CalendarActivity.this, MonProfil.class);
+                startActivity(intent);
+            }
+        });
+
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CalendarActivity.this, NotificationPage.class);
+                startActivity(intent);
+            }
+        });
 
         previousMonthButton.setOnClickListener(new View.OnClickListener() {
             @Override

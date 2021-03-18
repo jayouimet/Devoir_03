@@ -11,4 +11,5 @@
     <color name="blue">#ff0000ff</color>
     <color name="main_dark_blue">#FF08184E</color>
     <color name="main_light_blue">#13AFD6</color>
+    <color name="light_red">#FFD2D2</color>
 </resources>

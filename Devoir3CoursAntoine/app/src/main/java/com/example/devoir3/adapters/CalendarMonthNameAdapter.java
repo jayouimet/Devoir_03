@@ -14,11 +14,12 @@ import com.example.devoir3.obj.calendar.Calendar;
 import com.example.devoir3.obj.calendar.CalendarMonth;
 import com.example.devoir3.obj.calendar.CalendarYear;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CalendarMonthNameAdapter extends RecyclerView.Adapter<CalendarMonthNameAdapter.CalendarMonthNameViewHolder> {
-    private Calendar calendar;
     private Context context;
-    private String[] monthsName;
-    private int[] months;
+    private List<String> months;
 
     public class CalendarMonthNameViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
@@ -30,21 +31,16 @@ public class CalendarMonthNameAdapter extends RecyclerView.Adapter<CalendarMonth
     }
 
     public CalendarMonthNameAdapter(Context ct, Calendar c) {
-        calendar = c;
         context = ct;
-        monthsName = context.getResources().getStringArray(R.array.months_name);
+        String[] monthsName = context.getResources().getStringArray(R.array.months_name);
 
-        int num = 0;
+        months = new ArrayList<>();
+
         for (CalendarYear y: c.years) {
             for (CalendarMonth m: y.calendarMonths) {
-                num++;
+                String text = monthsName[m.month - 1] + " " + String.valueOf(y.yearNumber);
+                months.add(text);
             }
-        }
-
-        months = new int[num];
-
-        for (int i = 0; i < num; i++) {
-            months[i] = i;
         }
     }
 
@@ -58,11 +54,11 @@ public class CalendarMonthNameAdapter extends RecyclerView.Adapter<CalendarMonth
 
     @Override
     public void onBindViewHolder(@NonNull CalendarMonthNameAdapter.CalendarMonthNameViewHolder holder, int position) {
-        holder.textView.setText(monthsName[months[position] % 12]);
+        holder.textView.setText(months.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return months.length;
+        return months.size();
     }
 }

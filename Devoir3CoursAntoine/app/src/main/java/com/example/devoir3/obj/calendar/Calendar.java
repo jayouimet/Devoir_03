@@ -15,4 +15,12 @@ public class Calendar {
         years.add(new CalendarYear(currentYear));
         years.add(new CalendarYear(currentYear + 1));
     }
+
+    public void AddEvent(CalendarEvent event, int year, int month, int day) {
+        for (CalendarYear y: years) {
+            if (y.yearNumber == year) {
+                y.calendarMonths[month - 1].calendarDays.get(day - 1).events.add(event);
+            }
+        }
+    }
 }

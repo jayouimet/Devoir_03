@@ -54,4 +54,7 @@
 
     <string name="calendar_left_arrow_content_description">Mois précédent</string>
     <string name="calendar_right_arrow_content_description">Mois suivant</string>
+
+    <string name="notification_button_description">Notifications</string>
+    <string name="profile_button_description">Profile</string>
 </resources>

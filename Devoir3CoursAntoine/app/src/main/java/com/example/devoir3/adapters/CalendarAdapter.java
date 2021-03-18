@@ -1,6 +1,7 @@
 package com.example.devoir3.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.devoir3.R;
 import com.example.devoir3.obj.calendar.Calendar;
+import com.example.devoir3.obj.calendar.CalendarDay;
+import com.example.devoir3.obj.calendar.CalendarEvent;
 import com.example.devoir3.obj.calendar.CalendarMonth;
 import com.example.devoir3.obj.calendar.CalendarYear;
 
@@ -58,30 +61,60 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
 
     @Override
     public void onBindViewHolder(@NonNull CalendarViewHolder holder, int position) {
-        List<TextView> textViews = new ArrayList<>();
+        List<TextView> daysTextViews = new ArrayList<>();
+        List<TextView> eventTextViews = new ArrayList<>();
 
-        for (int i = 0; i < holder.tableLayout.getChildCount(); i++) {
+        for (int i = 1; i < holder.tableLayout.getChildCount(); i++) {
             View view = holder.tableLayout.getChildAt(i);
-            if (view instanceof TableRow) {
-                TableRow row = (TableRow) view;
-                for (int j = 0; j < row.getChildCount(); j++) {
-                    View v = row.getChildAt(j);
-                    if (v instanceof TextView) {
-                        textViews.add((TextView) v);
+            if (i % 2 == 0) {
+                if (view instanceof TableRow) {
+                    TableRow row = (TableRow) view;
+                    for (int j = 0; j < row.getChildCount(); j++) {
+                        View v = row.getChildAt(j);
+                        if (v instanceof TextView) {
+                            eventTextViews.add((TextView) v);
+                        }
+                    }
+                }
+            } else {
+                if (view instanceof TableRow) {
+                    TableRow row = (TableRow) view;
+                    for (int j = 0; j < row.getChildCount(); j++) {
+                        View v = row.getChildAt(j);
+                        if (v instanceof TextView) {
+                            daysTextViews.add((TextView) v);
+                        }
                     }
                 }
             }
         }
 
-        for (TextView t : textViews) {
-            if (textViews.indexOf(t) >= 7)
-                t.setText("");
+        for (TextView t : daysTextViews) {
+            t.setText("");
+            t.setBackgroundColor(Color.parseColor("#00000000"));
         }
 
-        int count = 0;
-        for (int i = 0; i < months.get(position).calendarDays.length; i++) {
-            textViews.get(i + ((months.get(position).startingDay) % 7) + 7).setText(String.valueOf(months.get(position).calendarDays[count].dayOfTheMonth));
-            count++;
+        for (TextView t : eventTextViews) {
+            t.setText("");
+            t.setBackgroundColor(Color.parseColor("#00000000"));
+        }
+
+        CalendarMonth month = months.get(position);
+        for (CalendarDay day: month.calendarDays) {
+            int indexOfTextView = month.calendarDays.indexOf(day) + (month.startingDay % 7);
+            daysTextViews.get(indexOfTextView).setText(String.valueOf(day.dayOfTheMonth));
+            if (day.events.size() > 0) {
+                daysTextViews.get(indexOfTextView).setBackgroundColor(context.getColor(R.color.light_red));
+                eventTextViews.get(indexOfTextView).setBackgroundColor(context.getColor(R.color.light_red));
+
+                StringBuilder stringBuilder = new StringBuilder();
+                for (CalendarEvent event : day.events) {
+                    stringBuilder.append(event.description);
+                    if (day.events.indexOf(event) < day.events.size() - 1)
+                        stringBuilder.append("\n");
+                }
+                eventTextViews.get(indexOfTextView).setText(stringBuilder.toString());
+            }
         }
     }
 
