@@ -131,7 +131,27 @@ public class MonProfil extends AppCompatActivity {
                                               }
                                           }
         );
+                //Lorsque l'utilisateur clique sur l'icône « Déconnexion », il est ramené vers la page d'accueil «LoginActivity»
+        ivMonProfilParametres = (ImageView) findViewById(R.id.ivMonProfilParametres);
+        ivMonProfilParametres.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                  startActivity(intent);
+                                              }
+                                          }
+        );
 
+            //Lorsque l'utilisateur clique sur l'icône « Déconnexion », il est ramené vers la page d'accueil «LoginActivity»
+        tvParamètres = (TextView) findViewById(R.id.tvParamètres);
+        tvParamètres.setOnClickListener(new View.OnClickListener() {
+                                             @Override
+                                             public void onClick(View v) {
+                                                 Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                 startActivity(intent);
+                                             }
+                                         }
+        );
 
         bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId()==R.id.mescours){
