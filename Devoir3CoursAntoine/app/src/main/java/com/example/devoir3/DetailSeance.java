@@ -84,7 +84,8 @@ public class DetailSeance extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){
-
+                    Intent intent=new Intent(DetailSeance.this,Messagerie.class);
+                    startActivity(intent);
                     return true;
                 }
                 return false;
@@ -95,12 +96,12 @@ public class DetailSeance extends AppCompatActivity {
         //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
         imageProfilSeance = (ImageView) findViewById(R.id.imageProfilSeance);
         imageProfilSeance.setOnClickListener(new View.OnClickListener() {
-                                                     @Override
-                                                     public void onClick(View v) {
-                                                         Intent intent = new Intent(DetailSeance.this, MonProfil.class);
-                                                         startActivity(intent);
-                                                     }
-                                                 }
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailSeance.this, MonProfil.class);
+                startActivity(intent);
+            }
+        }
         );
     }
     public void clickProfil(View v){

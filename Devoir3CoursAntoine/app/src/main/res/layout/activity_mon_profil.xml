@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottommenumescours"
+        android:id="@+id/bottommonprofile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemBackground="@color/white"

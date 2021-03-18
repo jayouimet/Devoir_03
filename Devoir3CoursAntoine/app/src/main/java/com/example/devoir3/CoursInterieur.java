@@ -90,29 +90,28 @@ public class CoursInterieur extends AppCompatActivity {
 
             }
         });
-        bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.mescours){
-                    Intent intent=new Intent(CoursInterieur.this, MesCours.class);
-                    startActivity(intent);
-                    return true;
-                }
-                else if(item.getItemId()==R.id.search){
-                    Intent intent=new Intent(CoursInterieur.this,RechercherCours.class);
-                    startActivity(intent);
-                    return true;
-                }
-                else if(item.getItemId()==R.id.calendrier){
-
-                    return true;
-                }
-                else if(item.getItemId()==R.id.message){
-
-                    return true;
-                }
-                return false;
+        //bar de navigation
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId()==R.id.mescours){
+                Intent intent=new Intent(CoursInterieur.this, MesCours.class);
+                startActivity(intent);
+                return true;
             }
+            else if(item.getItemId()==R.id.search){
+                Intent intent=new Intent(CoursInterieur.this,RechercherCours.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.calendrier){
+
+                return true;
+            }
+            else if(item.getItemId()==R.id.message){
+                Intent intent=new Intent(CoursInterieur.this,Messagerie.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
         });
 
 

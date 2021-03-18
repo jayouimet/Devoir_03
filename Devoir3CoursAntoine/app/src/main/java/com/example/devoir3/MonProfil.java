@@ -1,13 +1,17 @@
 package com.example.devoir3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MonProfil extends AppCompatActivity {
 
@@ -21,12 +25,12 @@ public class MonProfil extends AppCompatActivity {
     ImageView ivMonProfilCoeur;
     TextView tvParamètres;
     ImageView ivMonProfilParametres;
-
+    BottomNavigationView bottomNavigationMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_profil);
-
+        bottomNavigationMenu=findViewById(R.id.bottommonprofile);
         //Lorsque l'utilisateur clique sur le texte « Liste de cours », il est ramené vers la page « Mes Cours »
         tvListeCours = (TextView) findViewById(R.id.tvListeCours);
         tvListeCours.setOnClickListener(new View.OnClickListener() {
@@ -70,5 +74,27 @@ public class MonProfil extends AppCompatActivity {
                                                      }
                                                  }
         );
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId()==R.id.mescours){
+                Intent intent=new Intent(MonProfil.this, MesCours.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.search){
+                Intent intent=new Intent(MonProfil.this,RechercherCours.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.calendrier){
+
+                return true;
+            }
+            else if(item.getItemId()==R.id.message){
+                Intent intent=new Intent(MonProfil.this,Messagerie.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
     }
 }

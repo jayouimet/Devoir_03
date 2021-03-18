@@ -10,45 +10,45 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="12dp"
         android:text="@string/Messagerie"
-        android:textStyle="bold"
         android:textSize="32dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridView
         android:id="@+id/autreutilisateur"
-        android:layout_width="422dp"
-        android:layout_height="204dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:layout_marginTop="116dp"
         android:background="@color/turquoise"
         android:numColumns="3"
         android:paddingLeft="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/message"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/message"
-        android:layout_width="412dp"
-        android:layout_height="225dp"
-        android:layout_marginTop="364dp"
+        android:layout_width="356dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="308dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
 
         android:id="@+id/messageEdit"
-        android:layout_width="269dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="222dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Votre message"
@@ -59,26 +59,32 @@
         android:id="@+id/buttonenvoyer"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginTop="6dp"
-        android:text="Button"
+        android:layout_marginTop="24dp"
+        android:text="@string/envoyer"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/messageEdit"
         app:layout_constraintTop_toBottomOf="@+id/message" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="411dp"
-        android:layout_height="78dp"
+        android:id="@+id/barnavigationmessagerie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageEdit"
-        android:id="@+id/barnavigationmessagerie"
+        app:layout_constraintVertical_bias="0.875"
         app:menu="@menu/navigation" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/rechercheruser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="208dp"
