@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="192dp"
         android:layout_marginTop="116dp"
-        android:background="@color/turquoise"
+        android:background="#BDE1EA"
         android:numColumns="3"
         android:paddingLeft="40dp"
         app:layout_constraintEnd_toEndOf="parent"
