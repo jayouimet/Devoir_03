@@ -7,7 +7,7 @@
     android:foregroundTint="#00FFFFFF"
     android:outlineAmbientShadowColor="#00FFFFFF"
     android:outlineSpotShadowColor="#00FFFFFF"
-    tools:context=".InfoPerso">
+    tools:context=".ParametresNotification">
 
     <TextView
         android:id="@+id/tvIFT3"
