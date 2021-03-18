@@ -41,7 +41,15 @@ public class NotificationInfo extends AppCompatActivity {
                                                     }
                                                 }
         );
+
+
     }
+
+    //Lorsque l'utilisateur clique sur l'icône back, il est ramené vers la page précédente
+    public void quitterNotificationInfo(View v){
+        this.finish();
+    }
+
     public void setOnclickNavBar(){
         bottomNavigationMenu=findViewById(R.id.barnavigationNotifsInfo);
         bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {

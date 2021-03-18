@@ -27,4 +27,9 @@ public class InfoPerso extends AppCompatActivity {
                                         }
         );
     }
+
+    //Lorsque l'utilisateur clique sur l'icône X, il est ramené vers la page précédente
+    public void quitterInfoPerso(View v){
+        this.finish();
+    }
 }

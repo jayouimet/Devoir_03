@@ -30,6 +30,7 @@ public class NotificationPage extends AppCompatActivity {
     RecyclerView rv;
     Button readNotifBtn;
     ImageView ivNotificationPageProfil;
+    ImageView ivToutesNotifParametres;
     BottomNavigationView bottomNavigationMenu;
 
     @Override
@@ -61,6 +62,17 @@ public class NotificationPage extends AppCompatActivity {
                                                         startActivity(intent);
                                                     }
                                                 }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône paramètres, il est ramené vers la page « ParametresNotification »
+        ivToutesNotifParametres = (ImageView) findViewById(R.id.ivToutesNotifParametres);
+        ivToutesNotifParametres.setOnClickListener(new View.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(View v) {
+                                                            Intent intent = new Intent(NotificationPage.this, ParametresNotification.class);
+                                                            startActivity(intent);
+                                                        }
+                                                    }
         );
 
 
