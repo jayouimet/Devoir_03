@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 
+import android.media.Image;
 import android.os.AsyncTask;
 
 
@@ -29,6 +30,7 @@ public class NotificationsNonLues extends AppCompatActivity {
     RecyclerView rv;
     Button readNotifBtn;
     ImageView ivNotificationsNonLuesProfil;
+    ImageView ivNotifNonLuesParametres;
     BottomNavigationView bottomNavigationMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,13 @@ public class NotificationsNonLues extends AppCompatActivity {
         // Trouve notre RecyclerList et y ajoute des séparateurs d'items
         rv = findViewById(R.id.recycler_view);
         rv.addItemDecoration(new DividerItemDecoration(NotificationsNonLues.this, DividerItemDecoration.VERTICAL));
+
+        //Lorsque l'utilisateur clique sur l'icône paramètres, il est ramené vers la page « ParametresNotification »
+        ivNotifNonLuesParametres =  findViewById(R.id.ivNotifNonLuesParametres);
+        ivNotifNonLuesParametres.setOnClickListener(e ->{
+            Intent intent = new Intent(NotificationsNonLues.this, ParametresNotification.class);
+            startActivity(intent);
+        });
 
         // Exécute la tâche asynchrone
         MyTask task = new MyTask();

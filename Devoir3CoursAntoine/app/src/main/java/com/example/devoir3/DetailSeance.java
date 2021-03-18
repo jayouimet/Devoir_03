@@ -95,32 +95,13 @@ public class DetailSeance extends AppCompatActivity {
 
         });
 
-        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
-        imageProfilSeance = (ImageView) findViewById(R.id.imageProfilSeance);
-        imageProfilSeance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DetailSeance.this, MonProfil.class);
-                startActivity(intent);
-            }
-        }
-        );
 
-        //Lorsque l'utilisateur clique sur l'icône X, il est ramené vers la page « MesCours »
-        imageXSeance = (ImageView) findViewById(R.id.imageXSeance);
-        imageXSeance.setOnClickListener(new View.OnClickListener() {
-                                                 @Override
-                                                 public void onClick(View v) {
-                                                     Intent intent = new Intent(DetailSeance.this, CoursInterieur.class);
-                                                     startActivity(intent);
-                                                 }
-                                             }
-        );
     }
+
     public void clickProfil(View v){
-
-
     }
+
+    //Lorsque l'utilisateur clique sur l'icône X, il est ramené vers la page précédente
     public void quitterSeance(View v){
         this.finish();
     }

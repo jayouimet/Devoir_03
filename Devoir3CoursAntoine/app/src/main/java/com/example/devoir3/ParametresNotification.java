@@ -15,18 +15,11 @@ public class ParametresNotification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parametres_notification);
+    }
 
 
-
-        //Lorsque l'utilisateur clique sur l'icône back, il est ramené vers la page «Paramètres»
-//        ivParametresNotificationBack = (ImageView) findViewById(R.id.ivParametresNotificationBack);
-//        ivParametresNotificationBack.setOnClickListener(new View.OnClickListener() {
-//                                                       @Override
-//                                                       public void onClick(View v) {
-//                                                           Intent intent = new Intent(ParametresNotification.this, Parametres.class);
-//                                                           startActivity(intent);
-//                                                       }
-//                                                   }
-//        );
+    //Lorsque l'utilisateur clique sur l'icône back, il est ramené vers la page précédente
+    public void quitterParametreNotif(View v){
+        this.finish();
     }
 }

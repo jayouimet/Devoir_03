@@ -21,10 +21,11 @@ public class MonProfil extends AppCompatActivity {
     ImageView ivMonProfilInfosPerso;
     TextView tvNotifications;
     ImageView ivMonProfilNotification;
-    TextView tvFavoris;
-    ImageView ivMonProfilCoeur;
     TextView tvParamètres;
     ImageView ivMonProfilParametres;
+    TextView tvDeconnexion;
+    ImageView ivDeconnection;
+    ImageView ivCloseMonProfil;
     BottomNavigationView bottomNavigationMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +99,39 @@ public class MonProfil extends AppCompatActivity {
                                                  }
         );
 
+        //Lorsque l'utilisateur clique sur le texte « Déconnexion », il est ramené vers la page d'accueil «LoginActivity»
+        tvDeconnexion = (TextView) findViewById(R.id.tvDeconnexion);
+        tvDeconnexion.setOnClickListener(new View.OnClickListener() {
+                                               @Override
+                                               public void onClick(View v) {
+                                                   Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                   startActivity(intent);
+                                               }
+                                           }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône « Déconnexion », il est ramené vers la page d'accueil «LoginActivity»
+        ivDeconnection = (ImageView) findViewById(R.id.ivDeconnection);
+        ivDeconnection.setOnClickListener(new View.OnClickListener() {
+                                                       @Override
+                                                       public void onClick(View v) {
+                                                           Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                           startActivity(intent);
+                                                       }
+                                                   }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône « Déconnexion », il est ramené vers la page d'accueil «LoginActivity»
+        ivDeconnection = (ImageView) findViewById(R.id.ivDeconnection);
+        ivDeconnection.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                  startActivity(intent);
+                                              }
+                                          }
+        );
+
 
         bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId()==R.id.mescours){
@@ -122,5 +156,10 @@ public class MonProfil extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    //Lorsque l'utilisateur clique sur l'icône X, il est ramené vers la page précédente
+    public void quitterMonProfil(View v){
+        this.finish();
     }
 }
