@@ -22,18 +22,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.List;
 public class NotificationsNonLues extends AppCompatActivity {
     RecyclerView rv;
     Button readNotifBtn;
     ImageView ivNotificationsNonLuesProfil;
+    BottomNavigationView bottomNavigationMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification_page);
-        readNotifBtn = findViewById(R.id.nonLues);
+        setContentView(R.layout.activity_notifications_non_lues);
+        readNotifBtn = findViewById(R.id.notificationsNonLues);
         readNotifBtn.setOnClickListener(e->{
             Intent intent = new Intent(NotificationsNonLues.this,NotificationPage.class);
+            startActivity(intent);
+        });
+        setOnclickNavBar();
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        ivNotificationsNonLuesProfil =  findViewById(R.id.ivNotificationPageProfil);
+        ivNotificationsNonLuesProfil.setOnClickListener(e ->{
+            Intent intent = new Intent(NotificationsNonLues.this, MonProfil.class);
             startActivity(intent);
         });
         // Trouve notre RecyclerList et y ajoute des séparateurs d'items
@@ -44,18 +54,34 @@ public class NotificationsNonLues extends AppCompatActivity {
         MyTask task = new MyTask();
         task.execute();
 
-        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
-        ivNotificationsNonLuesProfil = (ImageView) findViewById(R.id.ivNotificationsNonLuesProfil);
-        ivNotificationsNonLuesProfil.setOnClickListener(new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View v) {
-                                                        Intent intent = new Intent(NotificationsNonLues.this, MonProfil.class);
-                                                        startActivity(intent);
-                                                    }
-                                                }
-        );
-    }
 
+    }
+    public void setOnclickNavBar(){
+        bottomNavigationMenu=findViewById(R.id.barnavigationNotifsNonLues);
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId()==R.id.mescours){
+                Intent intent=new Intent(NotificationsNonLues.this, MesCours.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.search){
+                Intent intent=new Intent(NotificationsNonLues.this,RechercherCours.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.calendrier){
+                Intent intent=new Intent(NotificationsNonLues.this,CalendarActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.message){
+                Intent intent=new Intent(NotificationsNonLues.this,Messagerie.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
+    }
     // Définis une tâche asynchrone. Cela permet d'exécuter une tâche en arrière plan sans geler
     // l'interface.
     class MyTask extends AsyncTask<Void, Void, Notification>{
