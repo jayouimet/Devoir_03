@@ -7,31 +7,6 @@
     android:id="@+id/page"
     tools:context=".MesCours">
 
-    <ImageView
-        android:id="@+id/imageProfileMescours"
-        android:layout_width="64dp"
-        android:layout_height="77dp"
-        app:layout_constraintBottom_toTopOf="@+id/mesCours"
-        app:layout_constraintEnd_toStartOf="@+id/imageHamburgerMescours"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552"
-        app:srcCompat="@mipmap/iconeprofil" />
-
-    <ImageView
-        android:id="@+id/imageHamburgerMescours"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imagedeuxieme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083"
-        app:srcCompat="@mipmap/hamburger_foreground" />
-
     <TextView
         android:id="@+id/mesCours"
         android:layout_width="wrap_content"
@@ -221,5 +196,29 @@
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:menu="@menu/navigation"/>
+
+    <ImageView
+        android:id="@+id/ivMesCoursNotifications"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061"
+        app:srcCompat="@drawable/notification" />
+
+    <ImageView
+        android:id="@+id/imageProfileMescours"
+        android:layout_width="89dp"
+        android:layout_height="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivMesCoursNotifications"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/iconeprofil_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ import java.util.List;
 public class NotificationPage extends AppCompatActivity {
     RecyclerView rv;
     Button readNotifBtn;
+    ImageView ivNotificationPageProfil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,19 @@ public class NotificationPage extends AppCompatActivity {
         // Exécute la tâche asynchrone
         MyTask task = new MyTask();
         task.execute();
+
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        ivNotificationPageProfil = (ImageView) findViewById(R.id.ivNotificationPageProfil);
+        ivNotificationPageProfil.setOnClickListener(new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View v) {
+                                                        Intent intent = new Intent(NotificationPage.this, MonProfil.class);
+                                                        startActivity(intent);
+                                                    }
+                                                }
+        );
+
+
     }
 
     // Définis une tâche asynchrone. Cela permet d'exécuter une tâche en arrière plan sans geler

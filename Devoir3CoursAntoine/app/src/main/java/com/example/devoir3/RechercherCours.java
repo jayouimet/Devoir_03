@@ -27,6 +27,7 @@ public class RechercherCours extends AppCompatActivity {
     TextView test;
     ImageView imageprofilerecherche;
     private BottomNavigationView bottomNavigationView;
+    ImageView ivRechercherCoursNotifications;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +118,17 @@ public class RechercherCours extends AppCompatActivity {
                                                      startActivity(intent);
                                                  }
                                              }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône notification, il est ramené vers la page «NotificationPage»
+        ivRechercherCoursNotifications = (ImageView) findViewById(R.id.ivRechercherCoursNotifications);
+        ivRechercherCoursNotifications.setOnClickListener(new View.OnClickListener() {
+                                                       @Override
+                                                       public void onClick(View v) {
+                                                           Intent intent = new Intent(RechercherCours.this, NotificationPage.class);
+                                                           startActivity(intent);
+                                                       }
+                                                   }
         );
     }
 

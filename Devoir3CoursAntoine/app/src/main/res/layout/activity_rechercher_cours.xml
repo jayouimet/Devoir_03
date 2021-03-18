@@ -7,6 +7,30 @@
     tools:context=".RechercherCours">
 
 
+    <ImageView
+        android:id="@+id/imageprofilerecherche"
+        android:layout_width="94dp"
+        android:layout_height="89dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivRechercherCoursNotifications"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/iconeprofil_foreground" />
+
+    <ImageView
+        android:id="@+id/ivRechercherCoursNotifications"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041"
+        app:srcCompat="@drawable/notification" />
+
     <ListView
         android:id="@+id/listeCours"
         android:layout_width="370dp"
@@ -44,28 +68,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageprofilerecherche"
-        android:layout_width="60dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/iconeprofil" />
-
-    <ImageView
-        android:id="@+id/imagehaburgerhambugrger"
-        android:layout_width="61dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toEndOf="@+id/imageprofilerecherche"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/hamburger_foreground" />
 
     <EditText
         android:id="@+id/rechercher"

@@ -18,6 +18,7 @@ public class MesCours extends AppCompatActivity {
     TextView nombredecours;
     BottomNavigationView bottomNavigationView;
     ImageView imageProfileMescours;
+    ImageView ivMesCoursNotifications;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +85,17 @@ public class MesCours extends AppCompatActivity {
         }
         );
 
+
+        //Lorsque l'utilisateur clique sur l'icône notification, il est ramené vers la page «NotificationPage»
+        ivMesCoursNotifications = (ImageView) findViewById(R.id.ivMesCoursNotifications);
+        ivMesCoursNotifications.setOnClickListener(new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View v) {
+                                                        Intent intent = new Intent(MesCours.this, NotificationPage.class);
+                                                        startActivity(intent);
+                                                    }
+                                                }
+        );
     }
 
 
