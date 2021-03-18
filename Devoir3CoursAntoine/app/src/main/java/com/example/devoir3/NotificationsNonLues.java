@@ -27,13 +27,20 @@ public class NotificationsNonLues extends AppCompatActivity {
     RecyclerView rv;
     Button readNotifBtn;
     ImageView ivNotificationsNonLuesProfil;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification_page);
-        readNotifBtn = findViewById(R.id.nonLues);
+        setContentView(R.layout.activity_notifications_non_lues);
+        readNotifBtn = findViewById(R.id.notificationsNonLues);
         readNotifBtn.setOnClickListener(e->{
             Intent intent = new Intent(NotificationsNonLues.this,NotificationPage.class);
+            startActivity(intent);
+        });
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        ivNotificationsNonLuesProfil =  findViewById(R.id.ivNotificationPageProfil);
+        ivNotificationsNonLuesProfil.setOnClickListener(e ->{
+            Intent intent = new Intent(NotificationsNonLues.this, MonProfil.class);
             startActivity(intent);
         });
         // Trouve notre RecyclerList et y ajoute des séparateurs d'items
@@ -44,16 +51,7 @@ public class NotificationsNonLues extends AppCompatActivity {
         MyTask task = new MyTask();
         task.execute();
 
-        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
-        ivNotificationsNonLuesProfil = (ImageView) findViewById(R.id.ivNotificationsNonLuesProfil);
-        ivNotificationsNonLuesProfil.setOnClickListener(new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View v) {
-                                                        Intent intent = new Intent(NotificationsNonLues.this, MonProfil.class);
-                                                        startActivity(intent);
-                                                    }
-                                                }
-        );
+
     }
 
     // Définis une tâche asynchrone. Cela permet d'exécuter une tâche en arrière plan sans geler

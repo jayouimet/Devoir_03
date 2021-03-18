@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -26,6 +27,7 @@ public class CoursInterieur extends AppCompatActivity {
     private Utilisateur utilisateur;
     BottomNavigationView bottomNavigationMenu;
     ImageView imageProfilInterieur;
+    ImageView ivCoursInterieurClose;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -124,6 +126,17 @@ public class CoursInterieur extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône X, il est ramené vers la page « MesCours »
+        ivCoursInterieurClose = (ImageView) findViewById(R.id.ivCoursInterieurClose);
+        ivCoursInterieurClose.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent intent = new Intent(CoursInterieur.this, MesCours.class);
+                                                startActivity(intent);
+                                            }
+                                        }
         );
     }
     public void clickProfil(View v){

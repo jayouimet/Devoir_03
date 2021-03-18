@@ -33,7 +33,7 @@ public class NotificationPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_page);
 
-        readNotifBtn = findViewById(R.id.nonLues);
+        readNotifBtn = findViewById(R.id.toutesNotifications);
         readNotifBtn.setOnClickListener(e->{
             Intent intent = new Intent(NotificationPage.this,NotificationsNonLues.class);
             startActivity(intent);

@@ -27,6 +27,7 @@ public class DetailSeance extends AppCompatActivity {
     TextView descriptionSpecifique;
     BottomNavigationView bottomNavigationView;
     ImageView imageProfilSeance;
+    ImageView imageXSeance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +103,17 @@ public class DetailSeance extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+        );
+
+        //Lorsque l'utilisateur clique sur l'icône X, il est ramené vers la page « MesCours »
+        imageXSeance = (ImageView) findViewById(R.id.imageXSeance);
+        imageXSeance.setOnClickListener(new View.OnClickListener() {
+                                                 @Override
+                                                 public void onClick(View v) {
+                                                     Intent intent = new Intent(DetailSeance.this, CoursInterieur.class);
+                                                     startActivity(intent);
+                                                 }
+                                             }
         );
     }
     public void clickProfil(View v){
