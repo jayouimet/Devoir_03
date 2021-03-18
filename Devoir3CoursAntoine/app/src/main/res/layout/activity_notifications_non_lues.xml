@@ -59,13 +59,13 @@
         android:text="Toutes les notifications"
         app:layout_constraintBottom_toTopOf="@+id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/barnavigationrechecher"
+        android:id="@+id/barnavigationNotifsNonLues"
         android:layout_width="413dp"
         android:layout_height="75dp"
         android:layout_marginTop="1dp"
