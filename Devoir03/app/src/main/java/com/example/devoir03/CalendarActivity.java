@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.devoir03.adapters.CalendarAdapter;
 import com.example.devoir03.adapters.CalendarMonthNameAdapter;
@@ -21,6 +23,8 @@ public class CalendarActivity extends AppCompatActivity {
     private RecyclerView calendarMonthNameRecyclerView;
     private ImageButton previousMonthButton;
     private ImageButton nextMonthButton;
+    ImageView ivCalendrierProfil;
+    ImageView ivCalendrierNotification;
 
     private Calendar calendar;
 
@@ -58,6 +62,31 @@ public class CalendarActivity extends AppCompatActivity {
                 calendarMonthNameRecyclerView.scrollToPosition(((LinearLayoutManager)(calendarMonthNameRecyclerView.getLayoutManager())).findFirstVisibleItemPosition() + 1);
             }
         });
+
+
+//        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+//        ivCalendrierProfil = (ImageView) findViewById(R.id.ivCalendrierProfil);
+//        ivCalendrierProfil.setOnClickListener(new View.OnClickListener() {
+//                                                    @Override
+//                                                    public void onClick(View v) {
+//                                                        Intent intent = new Intent(CalendarActivity.this, MonProfil.class);
+//                                                        startActivity(intent);
+//                                                    }
+//                                                }
+//        );
+//
+//        //Lorsque l'utilisateur clique sur l'icône notification, il est ramené vers la page « NotificationPage »
+//        ivCalendrierNotification = (ImageView) findViewById(R.id.ivCalendrierNotification);
+//        ivCalendrierNotification.setOnClickListener(new View.OnClickListener() {
+//                                                    @Override
+//                                                    public void onClick(View v) {
+//                                                        Intent intent = new Intent(CalendarActivity.this, NotificationPage.class);
+//                                                        startActivity(intent);
+//                                                    }
+//                                                }
+//        );
+
+
     }
 
     private void initialiseCalendarMonthNameRecyclerView() {
