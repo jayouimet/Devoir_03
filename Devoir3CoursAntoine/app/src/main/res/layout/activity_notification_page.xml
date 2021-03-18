@@ -8,10 +8,22 @@
     tools:context=".NotificationPage">
 
 
+    <ImageView
+        android:id="@+id/ivNotificationPageProfil"
+        android:layout_width="84dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/iconeprofil_foreground" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="388dp"
-        android:layout_height="543dp"
+        android:layout_width="396dp"
+        android:layout_height="464dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -47,10 +59,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nonLues"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.885" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/barnavigationrechecher"
         android:layout_width="413dp"

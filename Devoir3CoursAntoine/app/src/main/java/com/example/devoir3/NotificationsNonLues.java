@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,7 @@ import java.util.List;
 public class NotificationsNonLues extends AppCompatActivity {
     RecyclerView rv;
     Button readNotifBtn;
+    ImageView ivNotificationsNonLuesProfil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,17 @@ public class NotificationsNonLues extends AppCompatActivity {
         // Exécute la tâche asynchrone
         MyTask task = new MyTask();
         task.execute();
+
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        ivNotificationsNonLuesProfil = (ImageView) findViewById(R.id.ivNotificationsNonLuesProfil);
+        ivNotificationsNonLuesProfil.setOnClickListener(new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View v) {
+                                                        Intent intent = new Intent(NotificationsNonLues.this, MonProfil.class);
+                                                        startActivity(intent);
+                                                    }
+                                                }
+        );
     }
 
     // Définis une tâche asynchrone. Cela permet d'exécuter une tâche en arrière plan sans geler

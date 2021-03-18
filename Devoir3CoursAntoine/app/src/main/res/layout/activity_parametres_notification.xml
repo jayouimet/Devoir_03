@@ -13,21 +13,34 @@
         android:id="@+id/tvParametresNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Informations Personnelles"
+        android:text="Notifications"
+        android:textColor="#403D3D"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.072" />
+
+    <ImageView
+        android:id="@+id/ivParametresNotificationBack"
+        android:layout_width="35dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvParametresNotification"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071"
+        app:srcCompat="@drawable/arrow" />
 
     <TextView
         android:id="@+id/tvIFT2905"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Courriel"
+        android:text="IFT 2905"
         android:textColorHighlight="#000000"
         android:textColorHint="#000000"
         android:textSize="18sp"
@@ -40,141 +53,20 @@
         app:layout_constraintVertical_bias="0.315" />
 
     <TextView
-        android:id="@+id/tvMotdePasse"
+        android:id="@+id/tvParametreMessagesPrives"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mot de passe"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513" />
-
-    <TextView
-        android:id="@+id/tvCourriel3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nimportequel@courriel.ca"
+        android:text="Messages privés"
         android:textColor="#494646"
         android:textColorHighlight="#000000"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
-
-    <TextView
-        android:id="@+id/tvMotdePasse2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nimportequel@courriel.ca"
-        android:textColor="#494646"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
-
-    <TextView
-        android:id="@+id/tvMatriculeTitre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Matricule"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
-
-    <TextView
-        android:id="@+id/tvMatriculeEtudiant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1234567"
-        android:textColor="#494646"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752" />
-
-    <TextView
-        android:id="@+id/tvCourriel2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="courriel@umontreal.ca"
-        android:textColor="#494646"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
-
-    <ImageView
-        android:id="@+id/ivProfilInfoPerso"
-        android:layout_width="76dp"
-        android:layout_height="73dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
-        app:srcCompat="@drawable/profile_user" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617"
-        app:passwordToggleEnabled="true"
-        tools:ignore="MissingConstraints">
-
-        <EditText
-            android:id="@+id/hiddenPassword"
-            android:layout_width="331dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
-            android:background="#00FFFFFF"
-            android:backgroundTint="#00FFFFFF"
-            android:drawableTint="#00FFFFFF"
-            android:ems="5"
-            android:hint="mot de passe de l'étudiant ********"
-            android:inputType="textPassword"
-            android:textColor="#494646"
-            android:textColorHighlight="#00FFFFFF"
-            android:textColorHint="#00FFFFFF"
-            android:textColorLink="#00FFFFFF" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintVertical_bias="0.227" />
 
     <Switch
         android:id="@+id/switchMessagesPrives"
@@ -182,42 +74,106 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toEndOf="@+id/tvParametreMessagesPrives"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.224" />
 
     <TextView
         android:id="@+id/tvParametresDemandesAmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Montrer actif"
+        android:text="Demande d'ami"
         android:textColor="#494646"
         android:textColorHighlight="#000000"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintVertical_bias="0.162" />
 
     <TextView
-        android:id="@+id/tvParametreMessagesPrives"
+        android:id="@+id/tvParametresDemandesAmi3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Utiliser courriel personnel"
+        android:text="Activités du forum"
         android:textColor="#494646"
         android:textColorHighlight="#000000"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.381" />
+
+    <TextView
+        android:id="@+id/tvParametresDemandesAmi4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendrier - Nouveau"
+        android:textColor="#494646"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <TextView
+        android:id="@+id/tvParametresDemandesAmi5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendrier - Échéances"
+        android:textColor="#494646"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <TextView
+        android:id="@+id/tvParametresDemandesAmi6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nouvelle note"
+        android:textColor="#494646"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.524" />
+
+    <TextView
+        android:id="@+id/tvParametresDemandesAmi7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nouvelles note de cours"
+        android:textColor="#494646"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
     <Switch
         android:id="@+id/switchDemandeAmi"
@@ -225,10 +181,65 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.889"
+        app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toEndOf="@+id/tvParametresDemandesAmi"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintVertical_bias="0.163" />
+
+    <Switch
+        android:id="@+id/switchDemandeAmi3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/tvParametresDemandesAmi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <Switch
+        android:id="@+id/switchDemandeAmi4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/tvParametresDemandesAmi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <Switch
+        android:id="@+id/switchDemandeAmi5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/tvParametresDemandesAmi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <Switch
+        android:id="@+id/switchDemandeAmi6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/tvParametresDemandesAmi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <Switch
+        android:id="@+id/switchDemandeAmi7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/tvParametresDemandesAmi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
