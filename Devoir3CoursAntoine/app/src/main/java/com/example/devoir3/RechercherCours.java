@@ -81,7 +81,8 @@ public class RechercherCours extends AppCompatActivity {
         SimpleAdapter mSchedule = new SimpleAdapter (this.getBaseContext(), listItem, R.layout.rowrecherche,
                 new String[] { "titre", "professeurComplet","professeurCourriel"}, new int[] { R.id.titreCours, R.id.nomProf,R.id.courrielProf});
         listCours.setAdapter(mSchedule);
-        bottomNavigationView=findViewById(R.id.barnavigationrechecher);
+        bottomNavigationView = findViewById(R.id.barnavigationrechecher);
+        bottomNavigationView.setSelectedItemId(R.id.barnavigationrechecher);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -96,11 +97,13 @@ public class RechercherCours extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.calendrier){
-
+                    Intent intent=new Intent(RechercherCours.this, CalendarActivity.class);
+                    startActivity(intent);
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){
-
+                    Intent intent=new Intent(RechercherCours.this, Messagerie.class);
+                    startActivity(intent);
                     return true;
                 }
                 return false;

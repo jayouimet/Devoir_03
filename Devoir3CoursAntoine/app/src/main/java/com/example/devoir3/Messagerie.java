@@ -122,6 +122,7 @@ public class Messagerie extends AppCompatActivity {
             }
         });
         //defenie ce que les boutons de la barre de navigation fait
+        bottomNavigationMenu.setSelectedItemId(R.id.message);
         bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -134,7 +135,8 @@ public class Messagerie extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 } else if (item.getItemId() == R.id.calendrier) {
-
+                    Intent intent = new Intent(Messagerie.this, CalendarActivity.class);
+                    startActivity(intent);
                     return true;
                 } else if (item.getItemId() == R.id.message) {
 

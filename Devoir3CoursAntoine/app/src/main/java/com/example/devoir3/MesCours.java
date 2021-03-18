@@ -46,7 +46,8 @@ public class MesCours extends AppCompatActivity {
             ImageView imageCours=temp.findViewWithTag("i"+i);
             imageCours.setVisibility(View.INVISIBLE);
         }
-        bottomNavigationView=findViewById(R.id.bottommenumescours);
+        bottomNavigationView=findViewById(R.id.bottomNavBar);
+        bottomNavigationView.setSelectedItemId(R.id.mescours);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -60,7 +61,8 @@ public class MesCours extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.calendrier){
-
+                    Intent intent=new Intent(MesCours.this,CalendarActivity.class);
+                    startActivity(intent);
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){

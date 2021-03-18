@@ -111,7 +111,8 @@ public class MonProfil extends AppCompatActivity {
                 return true;
             }
             else if(item.getItemId()==R.id.calendrier){
-
+                Intent intent=new Intent(MonProfil.this,CalendarActivity.class);
+                startActivity(intent);
                 return true;
             }
             else if(item.getItemId()==R.id.message){

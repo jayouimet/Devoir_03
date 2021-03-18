@@ -10,19 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Devoir3">
         <activity android:name=".NotificationsNonLues"></activity>
-        <activity android:name=".Messagerie" />
-        <activity android:name=".InfoPerso" />
-        <activity android:name=".NotificationPage" />
-        <activity android:name=".NotificationInfo" />
-        <activity android:name=".MonProfil" />
-        <activity android:name=".RechercherCours" />
-        <activity android:name=".MesCours">
+        <activity
+            android:name=".CalendarActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ForgotPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Messagerie" />
+        <activity android:name=".InfoPerso" />
+        <activity android:name=".NotificationPage" />
+        <activity android:name=".NotificationInfo" />
+        <activity android:name=".MonProfil" />
+        <activity android:name=".RechercherCours" />
+        <activity android:name=".MesCours"></activity>
         <activity android:name=".DetailSeance" />
         <activity android:name=".CoursInterieur" />
     </application>

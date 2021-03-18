@@ -235,7 +235,7 @@
         android:background="?android:attr/listDivider"
         android:backgroundTint="#000000"
         android:foregroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/bottommenumescours"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"

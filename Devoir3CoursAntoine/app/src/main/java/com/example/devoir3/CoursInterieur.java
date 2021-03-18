@@ -103,7 +103,8 @@ public class CoursInterieur extends AppCompatActivity {
                 return true;
             }
             else if(item.getItemId()==R.id.calendrier){
-
+                Intent intent=new Intent(CoursInterieur.this,CalendarActivity.class);
+                startActivity(intent);
                 return true;
             }
             else if(item.getItemId()==R.id.message){
