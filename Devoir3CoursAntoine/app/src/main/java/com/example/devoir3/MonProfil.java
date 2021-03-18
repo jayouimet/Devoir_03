@@ -162,4 +162,9 @@ public class MonProfil extends AppCompatActivity {
     public void quitterMonProfil(View v){
         this.finish();
     }
+
+    //Lorsque l'utilisateur clique sur paramètres, il est ramené vers la page paramètres
+    public void ProfilversParametres(View v){
+        this.finish();
+    }
 }

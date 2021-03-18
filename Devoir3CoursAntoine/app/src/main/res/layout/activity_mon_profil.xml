@@ -20,7 +20,8 @@
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        app:layout_constraintVertical_bias="0.713"
+        android:onClick="ProfilversParametres"/>
 
     <ImageView
         android:id="@+id/ivDeconnection"
@@ -277,7 +278,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.705"
-        app:srcCompat="@drawable/settings" />
+        app:srcCompat="@drawable/settings"
+        android:onClick="ProfilversParametres"/>
 
     <ImageView
         android:id="@+id/ivCloseMonProfil"
