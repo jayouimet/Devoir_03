@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".CalendarActivity">
 
+    <ImageView
+        android:id="@+id/ivCalendrierNotification"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/notification" />
+
     <TextView
         android:id="@+id/calendarTitleLabel"
         android:layout_width="0dp"
@@ -77,5 +89,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCalendrierProfil"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/profile_user" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
