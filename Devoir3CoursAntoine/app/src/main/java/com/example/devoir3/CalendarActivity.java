@@ -44,7 +44,11 @@ public class CalendarActivity extends AppCompatActivity {
         notificationButton = findViewById(R.id.calendarNotificationButton);
 
         calendar = new Calendar();
-        calendar.AddEvent(new CalendarEvent("Remise du devoir 3"), 2021, 3, 18);
+        calendar.AddEvent(new CalendarEvent("Devoir 3",
+                "TP3 Interface personne machine\n\n" +
+                        "Combiner design et implémentation\n\n" +
+                        "Date de remise : jeudi 18 mars 2021, 23:59"
+                , "Remise du devoir 3"), 2021, 3, 18);
 
         calendarMonthNameRecyclerView = findViewById(R.id.calendarMonthNameRecyclerView);
         initialiseCalendarMonthNameRecyclerView();

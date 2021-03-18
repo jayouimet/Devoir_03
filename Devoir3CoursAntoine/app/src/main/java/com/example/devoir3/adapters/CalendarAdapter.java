@@ -1,6 +1,7 @@
 package com.example.devoir3.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.devoir3.EventActivity;
 import com.example.devoir3.R;
+import com.example.devoir3.Utilisateur;
 import com.example.devoir3.obj.calendar.Calendar;
 import com.example.devoir3.obj.calendar.CalendarDay;
 import com.example.devoir3.obj.calendar.CalendarEvent;
@@ -97,6 +100,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
         for (TextView t : eventTextViews) {
             t.setText("");
             t.setBackgroundColor(Color.parseColor("#00000000"));
+            t.setOnClickListener(null);
         }
 
         CalendarMonth month = months.get(position);
@@ -109,11 +113,17 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
 
                 StringBuilder stringBuilder = new StringBuilder();
                 for (CalendarEvent event : day.events) {
-                    stringBuilder.append(event.description);
+                    stringBuilder.append(event.calendarLabel);
                     if (day.events.indexOf(event) < day.events.size() - 1)
                         stringBuilder.append("\n");
                 }
+
                 eventTextViews.get(indexOfTextView).setText(stringBuilder.toString());
+                eventTextViews.get(indexOfTextView).setOnClickListener(e->{
+                    Intent intent = new Intent(context, EventActivity.class);
+                    intent.putExtra("calendarEvent", day.events.get(0));
+                    context.startActivity(intent);
+                });
             }
         }
     }

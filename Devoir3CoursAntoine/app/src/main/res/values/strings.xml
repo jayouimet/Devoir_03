@@ -57,6 +57,10 @@
 
     <string name="notification_button_description">Notifications</string>
     <string name="profile_button_description">Profile</string>
+    
+    <string name="add_homework_button">Ajouter un devoir</string>
+    <string name="homework_activity_image_description">Image du cours</string>
+    <string name="homework_activity_close_button">Fermer</string>
 
     <string name="title_activity_parametre">Parametre</string>
 

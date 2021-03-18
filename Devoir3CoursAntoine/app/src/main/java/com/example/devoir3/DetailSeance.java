@@ -38,7 +38,7 @@ public class DetailSeance extends AppCompatActivity {
         lienSpecifique=(TextView)findViewById(R.id.lienSpecifique);
         descriptionTitre=(TextView)findViewById(R.id.descriptionTitre);
         descriptionSpecifique=(TextView)findViewById(R.id.descriptionSpecifique);
-        bottomNavigationView=findViewById(R.id.barnavigationdetailseance);
+        bottomNavigationView=findViewById(R.id.homeworkActivityNavBar);
         //met les elements statique
         descriptionTitre.setText(R.string.description);
         lienTitre.setText(R.string.LienCours);

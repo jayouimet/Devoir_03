@@ -124,7 +124,7 @@
         android:onClick="quitterSeance"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/barnavigationdetailseance"
+        android:id="@+id/homeworkActivityNavBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemBackground="@color/white"
