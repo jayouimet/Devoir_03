@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Devoir3">
-        <activity android:name=".RechercherCours"></activity>
+        <activity android:name=".NotificationsNonLues"></activity>
+        <activity android:name=".Messagerie" />
+        <activity android:name=".InfoPerso" />
+        <activity android:name=".NotificationPage" />
+        <activity android:name=".NotificationInfo" />
+        <activity android:name=".MonProfil" />
+        <activity android:name=".RechercherCours" />
         <activity android:name=".MesCours">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailSeance" />
-        <activity android:name=".CoursInterieur"></activity>
+        <activity android:name=".CoursInterieur" />
     </application>
 
 </manifest>

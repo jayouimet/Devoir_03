@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ public class CoursInterieur extends AppCompatActivity {
     private TextView titre;
     private Utilisateur utilisateur;
     BottomNavigationView bottomNavigationMenu;
+    ImageView imageProfilInterieur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -88,30 +90,41 @@ public class CoursInterieur extends AppCompatActivity {
 
             }
         });
-        bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.mescours){
-                    Intent intent=new Intent(CoursInterieur.this, MesCours.class);
-                    startActivity(intent);
-                    return true;
-                }
-                else if(item.getItemId()==R.id.search){
-                    Intent intent=new Intent(CoursInterieur.this,RechercherCours.class);
-                    startActivity(intent);
-                    return true;
-                }
-                else if(item.getItemId()==R.id.calendrier){
-
-                    return true;
-                }
-                else if(item.getItemId()==R.id.message){
-
-                    return true;
-                }
-                return false;
+        //bar de navigation
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId()==R.id.mescours){
+                Intent intent=new Intent(CoursInterieur.this, MesCours.class);
+                startActivity(intent);
+                return true;
             }
+            else if(item.getItemId()==R.id.search){
+                Intent intent=new Intent(CoursInterieur.this,RechercherCours.class);
+                startActivity(intent);
+                return true;
+            }
+            else if(item.getItemId()==R.id.calendrier){
+
+                return true;
+            }
+            else if(item.getItemId()==R.id.message){
+                Intent intent=new Intent(CoursInterieur.this,Messagerie.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
         });
+
+
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        imageProfilInterieur = (ImageView) findViewById(R.id.imageProfilInterieur);
+        imageProfilInterieur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CoursInterieur.this, MonProfil.class);
+                startActivity(intent);
+            }
+        }
+        );
     }
     public void clickProfil(View v){
         Log.d("tag","icone profile");

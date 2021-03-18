@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class DetailSeance extends AppCompatActivity {
     TextView descriptionTitre;
     TextView descriptionSpecifique;
     BottomNavigationView bottomNavigationView;
+    ImageView imageProfilSeance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,13 +84,25 @@ public class DetailSeance extends AppCompatActivity {
                     return true;
                 }
                 else if(item.getItemId()==R.id.message){
-
+                    Intent intent=new Intent(DetailSeance.this,Messagerie.class);
+                    startActivity(intent);
                     return true;
                 }
                 return false;
             }
 
         });
+
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        imageProfilSeance = (ImageView) findViewById(R.id.imageProfilSeance);
+        imageProfilSeance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailSeance.this, MonProfil.class);
+                startActivity(intent);
+            }
+        }
+        );
     }
     public void clickProfil(View v){
 

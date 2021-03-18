@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ public class RechercherCours extends AppCompatActivity {
     ArrayList<Cours> bdCours;
     ListView listCours;
     TextView test;
+    ImageView imageprofilerecherche;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -105,6 +107,17 @@ public class RechercherCours extends AppCompatActivity {
             }
 
         });
+
+        //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
+        imageprofilerecherche = (ImageView) findViewById(R.id.imageprofilerecherche);
+        imageprofilerecherche.setOnClickListener(new View.OnClickListener() {
+                                                 @Override
+                                                 public void onClick(View v) {
+                                                     Intent intent = new Intent(RechercherCours.this, MonProfil.class);
+                                                     startActivity(intent);
+                                                 }
+                                             }
+        );
     }
 
     /**
