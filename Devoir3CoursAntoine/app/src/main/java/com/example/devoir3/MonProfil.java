@@ -136,7 +136,7 @@ public class MonProfil extends AppCompatActivity {
         ivMonProfilParametres.setOnClickListener(new View.OnClickListener() {
                                               @Override
                                               public void onClick(View v) {
-                                                  Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                  Intent intent = new Intent(MonProfil.this, Parametres.class);
                                                   startActivity(intent);
                                               }
                                           }
@@ -147,7 +147,7 @@ public class MonProfil extends AppCompatActivity {
         tvParamètres.setOnClickListener(new View.OnClickListener() {
                                              @Override
                                              public void onClick(View v) {
-                                                 Intent intent = new Intent(MonProfil.this, LoginActivity.class);
+                                                 Intent intent = new Intent(MonProfil.this, Parametres.class);
                                                  startActivity(intent);
                                              }
                                          }
