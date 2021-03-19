@@ -1,24 +1,17 @@
 package com.example.devoir3;
-
 import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 public class Notification {
     public List<Notifications> notifications = new ArrayList<Notifications>() {
     };
     public List<Notifications> notificationsUnread = new ArrayList<Notifications>() {
     };
-
     public Notification() {
-
-
         addNotifications();
     }
-
-
+    //Creation des exemples de notifications possible
     public void addNotifications(){
         String info = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius ut est et malesuada." +
                 " Morbi euismod fringilla risus, vel interdum dolor suscipit mattis. Pellentesque posuere, est in accumsan feugiat," +
@@ -47,10 +40,7 @@ public class Notification {
         this.notificationsUnread.add(tempNotif);
         tempNotif = new Notifications("Bienvenue à MAT1700", info,"MAT1700",true);
         this.notifications.add(tempNotif);
-
-
     }
-
     public List getNotifications(){
         return this.notifications;
     }
