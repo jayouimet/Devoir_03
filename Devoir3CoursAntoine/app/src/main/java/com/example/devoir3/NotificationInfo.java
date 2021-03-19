@@ -29,27 +29,21 @@ public class NotificationInfo extends AppCompatActivity {
         tv2.setText(b.getString("title"));
         tv1.setText(b.getString("info"));
         tv3.setText(b.getString("sigle"));
-
-
         //Lorsque l'utilisateur clique sur l'icône profil, il est ramené vers la page « Mon Profil »
         imageNotificationInfoProfil = (ImageView) findViewById(R.id.imageNotificationInfoProfil);
         imageNotificationInfoProfil.setOnClickListener(new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View v) {
-                                                        Intent intent = new Intent(NotificationInfo.this, MonProfil.class);
-                                                        startActivity(intent);
-                                                    }
-                                                }
-        );
-
-
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NotificationInfo.this, MonProfil.class);
+                startActivity(intent);
+            }
+        });
     }
-
     //Lorsque l'utilisateur clique sur l'icône back, il est ramené vers la page précédente
     public void quitterNotificationInfo(View v){
         this.finish();
     }
-
+    //Methode pour initialiser les fonctionnement de la barre de navigation
     public void setOnclickNavBar(){
         bottomNavigationMenu=findViewById(R.id.barnavigationNotifsInfo);
         bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
