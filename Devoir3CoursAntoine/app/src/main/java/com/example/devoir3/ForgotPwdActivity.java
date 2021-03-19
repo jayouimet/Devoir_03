@@ -15,11 +15,11 @@ public class ForgotPwdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_pwd);
-
+        // Référence des input au UI
         this.forgotPasswordReinitialiseButton = findViewById(R.id.forgotPasswordReinitialiseButton);
         this.forgotPasswordMessageSentLabel = findViewById(R.id.forgotPasswordMessageSentLabel);
         this.forgotPasswordMessageSentLabel.setVisibility(View.GONE);
-
+        // On lie le bouton au message d'envoi de courriel
         this.forgotPasswordReinitialiseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

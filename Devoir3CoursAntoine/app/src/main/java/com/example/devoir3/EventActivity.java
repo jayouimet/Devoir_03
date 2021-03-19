@@ -29,9 +29,9 @@ public class EventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
-
+        // On récupère les arguments passés à la création de l'activité
         calendarEvent = getIntent().getParcelableExtra("calendarEvent");
-
+        // Référence de l'UI à la logique
         homeworkActivityProfileButton = findViewById(R.id.homeworkActivityProfileButton);
         homeworkActivityCloseButton = findViewById(R.id.homeworkActivityCloseButton);
         uploadHomeworkButton = findViewById(R.id.uploadHomeworkButton);
@@ -40,11 +40,11 @@ public class EventActivity extends AppCompatActivity {
         homeworkDescriptionTextView = findViewById(R.id.homeworkDescriptionTextView);
 
         homeworkActivityNavBar = findViewById(R.id.homeworkActivityNavBar);
-
+        // On ajoute la fermeture de l'activité comme action du bouton
         homeworkActivityCloseButton.setOnClickListener(e->{
             this.finish();
         });
-
+        // Démarrage de l'activité au click du bouton de profil
         homeworkActivityProfileButton.setOnClickListener(e->{
             Intent intent = new Intent(EventActivity.this, MonProfil.class);
             startActivity(intent);
@@ -55,6 +55,7 @@ public class EventActivity extends AppCompatActivity {
         });
 
         homeworkActivityNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            // Démarrage de l'activité dépendemment du bouton cliqué
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if(item.getItemId() == R.id.mescours){
@@ -80,7 +81,7 @@ public class EventActivity extends AppCompatActivity {
                 return false;
             }
         });
-
+        // Affichage de l'information de l'évènement
         homeworkTitleTextView.setText(calendarEvent.title);
         homeworkDescriptionTextView.setText(calendarEvent.description);
     }
