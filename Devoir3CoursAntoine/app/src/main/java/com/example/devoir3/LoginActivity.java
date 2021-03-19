@@ -58,8 +58,7 @@ public class LoginActivity extends AppCompatActivity {
      * */
     private boolean auth()
     {
-        if ((this.emailTextBox.getText().toString().equals("Test") || this.emailTextBox.getText().toString().equals("")) &&
-                (this.passwordTextBox.getText().toString().equals("1234") || this.passwordTextBox.getText().toString().equals(""))) {
+        if (this.emailTextBox.getText().toString().equals("Test") && this.passwordTextBox.getText().toString().equals("1234")) {
             return true;
         }
         return false;
