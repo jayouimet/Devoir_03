@@ -12,14 +12,7 @@ public class Parametres extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parametres);
-    }
-
-    // Lorsque l'utilisateur clique sur l'icône "<", il est ramené vers la page précédente
-    public void quitterParam(View v){ this.finish(); }
-
-    // Méthode pour initialiser le fonctionnement de la barre de navigation
-    public void setOnclickNavBar(){
-        bottomNavigationMenu=findViewById(R.id.barnavigationNotifsInfo);
+        bottomNavigationMenu=findViewById(R.id.barnavigationparametre);
         bottomNavigationMenu.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId()==R.id.mescours){
                 Intent intent=new Intent(Parametres.this, MesCours.class);
@@ -44,6 +37,12 @@ public class Parametres extends AppCompatActivity {
             return false;
         });
     }
+
+    // Lorsque l'utilisateur clique sur l'icône "<", il est ramené vers la page précédente
+    public void quitterParam(View v){ this.finish(); }
+
+
+
 }
 
 

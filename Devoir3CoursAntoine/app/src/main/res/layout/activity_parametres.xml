@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/arrow" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/barnavigationmessagerie"
+        android:id="@+id/barnavigationparametre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
