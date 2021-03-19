@@ -35,7 +35,7 @@ public class CalendarMonthNameAdapter extends RecyclerView.Adapter<CalendarMonth
         String[] monthsName = context.getResources().getStringArray(R.array.months_name);
 
         months = new ArrayList<>();
-
+        // Création d'une chaine de noms de mois par rapport au calendrier passé en paramètre
         for (CalendarYear y: c.years) {
             for (CalendarMonth m: y.calendarMonths) {
                 String text = monthsName[m.month - 1] + " " + String.valueOf(y.yearNumber);
@@ -54,6 +54,7 @@ public class CalendarMonthNameAdapter extends RecyclerView.Adapter<CalendarMonth
 
     @Override
     public void onBindViewHolder(@NonNull CalendarMonthNameAdapter.CalendarMonthNameViewHolder holder, int position) {
+        // Affichage du mois désiré
         holder.textView.setText(months.get(position));
     }
 
